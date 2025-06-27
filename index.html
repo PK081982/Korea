@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모든 사람들에게</title>
+
+    <style>
+        body {
+            /* position: absolute; */
+            margin: 0;
+            padding: 0;
+            width: 99vw;
+            height: 99vh;
+            /* background-repeat: no-repeat;
+            background-size: cover; */
+            word-break: keep-all;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            /* //padding: 200px; */
+        }
+
+        .img {
+            background-size: 100% 100%;
+            height: 65vh;
+            background-repeat: no-repeat;
+
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 5px;
+            /* background: #d9e8ea; */
+            max-width:35vh ;
+            max-width: 100%;
+        }
+
+        p {
+            color: white;
+            font-size: larger;
+            font-weight: 800;
+            /* text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00; */
+            text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+            line-height: 2;
+            margin: 5px;
+        }
+
+        footer {
+            display: flex;
+            height: 100%;
+        }
+
+        .site {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin-left: 10px;
+            max-width: 150px;
+            max-height: 50px;
+            border-style: inset;
+            background-color: #71df7e;
+            /* Синий фон */
+            color: white;
+            /* Белый текст */
+            border: none;
+            /* Убираем границу */
+            padding: 10px 20px;
+            /* Внутренние отступы */
+            font-size: 16px;
+            /* Размер шрифта */
+            border-radius: 5px;
+            /* Закруглённые углы */
+            cursor: pointer;
+            /* Изменение курсора при наведении */
+            transition: background-color 0.3s ease;
+        }
+
+        .site:hover {
+            background-color: #2dd8eb;
+            /* Тёмно-синий при наведении */
+        }
+
+        .reStart {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            margin-right: 10px;
+            max-width: 150px;
+            max-height: 50px;
+            margin-left: auto;
+            border-style: inset;
+            background-color: #e4addf;
+            /* Синий фон */
+            color: white;
+            /* Белый текст */
+            border: none;
+            /* Убираем границу */
+            padding: 10px 20px;
+            /* Внутренние отступы */
+            font-size: 16px;
+            /* Размер шрифта */
+            border-radius: 5px;
+            /* Закруглённые углы */
+            cursor: pointer;
+            /* Изменение курсора при наведении */
+            transition: background-color 0.3s ease;
+
+        }
+
+        .reStart:hover {
+            background-color: #b3b000;
+            /* Тёмно-синий при наведении */
+        }
+
+        @media screen and (max-height: 610px) and (max-width: 1024px) {
+            p {
+                margin: 5px;
+            }
+
+            .img {
+                height: 50vh;
+            }
+        }
+ @media screen and (max-height: 900px) and (max-width: 420px) {
+            p {
+                margin: 25px;
+            }
+
+            .img {
+                height: 50vh;
+            }
+        }
+        @media screen and (max-height: 850px) and (max-width: 1300px) {
+            p {
+                margin: 8px;
+            }
+
+            .img {
+                height: 50vh;
+            }
+        }
+
+
+
+        @media(max-width:768px) {
+            body {
+                font-size: 12px;
+                width: 100%;
+            }
+
+            .img {
+                height: 50vh;
+            }
+
+            .site,
+            .reStart {
+                max-width: 100px;
+                font-size: 15px;
+            }
+
+            .reStart {
+                max-height: 100%;
+            }
+        }
+
+        @media(max-width:480px) {
+            body {
+                /*height:300px;*/
+                font-size: 9px;
+            }
+
+            .img {
+                height: 50vh;
+            }
+
+            .site,
+            .reStart {
+                max-width: 100px;
+                font-size: 10px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <div id="imgg" class="img">
+            <!-- <img id="img" src="./img/1.jpg" alt=""> -->
+        </div>
+        <div class="container">
+            <p class="string1" id="string1" lang="ko"></p>
+            <p class="string2" id="string2" lang="ko"></p>
+            <p class="string3" id="string3" lang="ko"></p>
+            <p class="string4" id="string4" lang="ko"></p>
+            <p class="string5" id="string5" lang="ko"></p>
+            <p class="string6" id="string6" lang="ko"></p>
+        </div>
+        <footer id="footer">
+
+        </footer>
+    </section>
+
+    <script>
+        var imgg = document.getElementById('imgg');
+        // function changeBgImg() {  
+
+        //     imgg.setAttribute('src', "./img/2.jpg");  
+        // }  
+        // changeBgImg();
+
+        function changeBgImg() {
+            imgg.style.backgroundImage = "url('./img/1.jpg')";
+            //    bod.style.backgroundImage = "url('https://cdn.culture.ru/images/c98802b0-9e98-59f8-9d27-ad3352f1bdb1')";
+        }
+
+        function changeBgImgg() {
+            // bod.style.backgroundImage = "url('./img/1.jpg')";
+            imgg.style.backgroundImage = "url('./img/2.jpg')";
+
+        }
+
+        function changeBgImggg() {
+            // bod.style.backgroundImage = "url('./img/1.jpg')";
+            imgg.style.backgroundImage = "url('./img/3.jpg')";
+
+        }
+
+        function changeBgImgggg() {
+            // bod.style.backgroundImage = "url('./img/1.jpg')";
+            imgg.style.backgroundImage = "url('./img/4.jpg')";
+
+        }
+        changeBgImg();
+        const string1 = ['비​와 눈​이 하늘​에서 내리면, 땅​을 흠뻑 적셔 소출​을 내고 싹​이 나게 하여,'];
+        const string2 = ['씨 뿌리​는 사람​에게 씨앗​을 주고 먹는 자​에게 빵​을 주기 전​까지는 다시 하늘​로 돌아가지 않는 것​처럼,'];
+        const string3 = ['내 입​에서 나가는 나​의 말​도 그러할 것​이다.'];
+        const string4 = ['그것​은 성​과 없이 내게로 돌아오지 않고,'];
+        const string5 = ['내​가 기뻐하는 것​을 틀림​없이 이루며,'];
+        const string6 = ['내​가 하라고 보낸 일​을 확실​히 이룰 것​이다.'];
+
+        const string_1 = ['그분​은 나라​들 가운데​서 심판​하시고 많은 민족​들​에 관한 문제​들​을 바로잡으실 것​이다. '];
+        const string_2 = [' 그​들​은 칼​을 쳐서 보습​을 만들고 창​을 쳐서 낫​을 만들 것​이다.'];
+        const string_3 = ['나라​가 나라​를 대적​하여 칼​을 들지도 않고 다시는 전쟁​을 배워 익히지도 않을 것​이다.'];
+
+        const string__1 = ['그때​에 저​는 사람​은 사슴​처럼 뛰고 말 못 하는 사람​의 혀​는 기뻐 외칠 것​이다.'];
+        const string__2 = ['광야​에서 물​이 터져 나오고 사막 평원​에서 시내​가 흐를 것​이다.'];
+        const string__3 = ['그분​은 그​들​의 눈​에서 모든 눈물​을 닦아 주실 것​이다.'];
+        const string__4 = ['더 이상 죽음​이 없고, 슬픔​과 부르짖음​과 고통​도 더는 없을 것​이다.'];
+        const string__5 = ['이전 것​들​이 다 사라져 버린 것​이다.'];
+
+        const string___1 = ['그리고 왕좌​에 앉아 계신 분​이 이렇게 말씀​하셨다.'];
+        const string___2 = ['“보아라! 내​가 모든 것​을 새롭게 한다.”'];
+        const string___3 = ['또 그분​이 말씀​하셨다.'];
+        const string___4 = ['“이 말​은 신실​하고 참되니 기록​하여라.”'];
+        const str1 = document.getElementById('string1');
+        const str2 = document.getElementById('string2');
+        const str3 = document.getElementById('string3');
+        const str4 = document.getElementById('string4');
+        const str5 = document.getElementById('string5');
+        const str6 = document.getElementById('string6');
+        const foot = document.getElementById('footer');
+
+        function main() {
+
+            setTimeout(function () {
+                str1.innerText = string1;
+                str1.style.backgroundColor="#d9e8ea"
+            }, 1000);
+
+            setTimeout(function () {
+                str2.innerText = string2;
+                 str2.style.backgroundColor="#d9e8ea"
+            }, 3000);
+            setTimeout(function () {
+                str3.innerText = string3;
+                 str3.style.backgroundColor="#d9e8ea"
+            }, 6000);
+            setTimeout(function () {
+                str4.innerText = string4;
+                 str4.style.backgroundColor="#d9e8ea"
+            }, 9000);
+            setTimeout(function () {
+                str5.innerText = string5;
+                 str5.style.backgroundColor="#d9e8ea"
+            }, 12000);
+            setTimeout(function () {
+                str6.innerText = string6;
+                 str6.style.backgroundColor="#d9e8ea"
+            }, 15000);
+            setTimeout(function () {
+                str1.innerText = "";
+                str2.innerText = "";
+                str3.innerText = "";
+                str4.innerText = "";
+                str5.innerText = "";
+                str6.innerText = "";
+                changeBgImgg();
+            }, 20000);
+
+
+            setTimeout(function () {
+                str1.innerText = string_1;
+            }, 23000);
+            setTimeout(function () {
+                str2.innerText = string_2;
+            }, 26000);
+            setTimeout(function () {
+                str3.innerText = string_3;
+            }, 30000);
+            setTimeout(function () {
+                str1.innerText = "";
+                str2.innerText = "";
+                str3.innerText = "";
+                changeBgImggg();
+            }, 35000);
+
+
+
+            setTimeout(function () {
+                str1.innerText = string__1;
+            }, 40000);
+            setTimeout(function () {
+                str2.innerText = string__2;
+            }, 43000);
+            setTimeout(function () {
+                str4.innerText = string__3;
+            }, 46000);
+            setTimeout(function () {
+                str5.innerText = string__4;
+            }, 49000);
+            setTimeout(function () {
+                str6.innerText = string__5;
+            }, 52000);
+            setTimeout(function () {
+                str1.innerText = "";
+                str2.innerText = "";
+                str4.innerText = "";
+                str5.innerText = "";
+                str6.innerText = "";
+                changeBgImgggg();
+            }, 57000);
+
+            setTimeout(function () {
+                str1.innerText = string___1;
+            }, 60000);
+            setTimeout(function () {
+                str2.innerText = string___2;
+            }, 63000);
+            setTimeout(function () {
+                str4.innerText = string___3;
+            }, 66000);
+            setTimeout(function () {
+                str5.innerText = string___4;
+            }, 69000);
+            setTimeout(function () {
+                foot.innerHTML = `
+          <a class="site" href="https://www.jw.org/"> 자세히 알아보십시오 </a>
+          <button class="reStart" onclick="location.reload(); return false;"> 다시보기</button>
+      `
+            }, 74000);
+            clearTimeout();
+        }
+        main();
+    </script>
+</body>
+
+</html>
